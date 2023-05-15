@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning React</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    
+
+
+
+
+
+
+
+    
+<script src="https://unpkg.com/react@16.14.0/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script>
+        const rootElement = document.getElementById("root")
+        const element = React.createElement('div', {
+            children: 'Learning react',
+            className: 'container'
+        })
+        ReactDom.render(element, rootElement)
+        
+        // const element = document.createElement('div')
+        // element.textContent = "Learning react"
+        // element.className = "container"
+        // rootElement.appendChild(element)
+        // const element = document.createElement('div')
+        // element.textContent = "Learning react"
+        // element.className = "container"
+        // rootElement.appendChild(element)
+    </script>
+</body>
+</html>
