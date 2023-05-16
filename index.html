@@ -9,33 +9,36 @@
 <body>
     <div id="root"></div>
 
-    
+<!-- <div class="container">
+    <h1>Welcome To My World</h1>
+    <h2>Hello world</h2>
+</div> -->
 
 
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
 
+    <script type="text/babel">
 
+const rootElement = document.getElementById('root')
+function SayHello({firstName, lastName}) {
+    return (
+        <div>
+            Hello {firstName} {lastName}!
+        </div>
+    )
+}
 
+SayHello.propTypes = {
+    firstName: PropTypes.string.isRequired,
+    lasttName: PropTypes.string.isRequired,
+}
 
+const element = <SayHello firstName = {false} />
+ReactDOM.render(element, rootElement)
 
-    
-<script src="https://unpkg.com/react@16.14.0/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
-    <script>
-        const rootElement = document.getElementById("root")
-        const element = React.createElement('div', {
-            children: 'Learning react',
-            className: 'container'
-        })
-        ReactDom.render(element, rootElement)
-        
-        // const element = document.createElement('div')
-        // element.textContent = "Learning react"
-        // element.className = "container"
-        // rootElement.appendChild(element)
-        // const element = document.createElement('div')
-        // element.textContent = "Learning react"
-        // element.className = "container"
-        // rootElement.appendChild(element)
     </script>
 </body>
 </html>
